@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "863272787933",
+    "project_id": "travethon-2bc32",
+    "storage_bucket": "travethon-2bc32.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863272787933:android:bd2891284cfa044f6da034",
+        "android_client_info": {
+          "package_name": "uk.ac.tees.w9501293.travethon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "863272787933-p83q3iogv3rtq5vc8gmqmg5rbfs3j08u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "uk.ac.tees.w9501293.travethon",
+            "certificate_hash": "93cb4adee9c716b846f5c776a5f71f6e35dd0f12"
+          }
+        },
+        {
+          "client_id": "863272787933-ao3ot9kupk4n6b6s3ik95e19i1vuvlib.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxfZSlackUFlNuSXuMFPN_1Xsux7AtZuc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "863272787933-ao3ot9kupk4n6b6s3ik95e19i1vuvlib.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
