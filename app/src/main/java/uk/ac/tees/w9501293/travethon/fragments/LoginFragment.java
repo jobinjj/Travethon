@@ -25,7 +25,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import uk.ac.tees.w9501293.travethon.Constants;
+import uk.ac.tees.w9501293.travethon.utils.Constants;
 import uk.ac.tees.w9501293.travethon.MainActivity;
 import uk.ac.tees.w9501293.travethon.R;
 

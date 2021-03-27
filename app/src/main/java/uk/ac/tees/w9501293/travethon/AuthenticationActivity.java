@@ -23,6 +23,9 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 import uk.ac.tees.w9501293.travethon.fragments.LoginFragment;
 import uk.ac.tees.w9501293.travethon.fragments.RegisterFragment;
+import uk.ac.tees.w9501293.travethon.room.users.Users;
+import uk.ac.tees.w9501293.travethon.room.users.UsersTask;
+import uk.ac.tees.w9501293.travethon.utils.Constants;
 
 public class AuthenticationActivity extends AppCompatActivity implements LoginFragment.OnFragmentInteractionListener, RegisterFragment.OnFragmentInteractionListener {
 
@@ -93,8 +96,23 @@ public class AuthenticationActivity extends AppCompatActivity implements LoginFr
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            updateUI(user);
+                            final FirebaseUser user = mAuth.getCurrentUser();
+                            if (user != null){
+                                FirebaseTask.addUser(user.getUid(), user.getDisplayName(), user.getEmail(), "Not available",
+                                        "Not available", user.getPhotoUrl().toString() , new FirebaseTask.addUserListener() {
+                                            @Override
+                                            public void onAdded(Users users) {
+                                                new UsersTask().addUser(AuthenticationActivity.this,users);
+                                                updateUI(user);
+                                            }
+
+                                            @Override
+                                            public void onFailed(String message) {
+
+                                            }
+                                        });
+                            }
+
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
